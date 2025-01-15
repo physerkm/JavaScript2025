@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Challenge 2</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        line-height: 1.6;
+        background: black;
+        color: #ddd;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 5rem;
+        font-size: 2rem;
+        color: #ddd;
+      }
+
+      ol {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      ol li {
+        margin: 10px 0;
+        padding-left: 10px;
+      }
+
+      p {
+        max-width: 800px;
+        margin: 10px auto;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+    <script defer src="challenge2.js"></script>
+  </head>
+  <body>
+    <h1>Challenge 2</h1>
+    <ol>
+      <li>Re-create challenge 1, but this time using an ES6 class.</li>
+      <li>
+        Add a getter called 'speedUS' which returns the current speed in mi/h
+        (divide by 1.6).
+      </li>
+      <li>
+        Add a setter called 'speedUS' which sets the current speed in mi/h (but
+        converts it to km/h before storing the value, by multiplying the input
+        by 1.6).
+      </li>
+      <li>
+        Create a new car and experiment with the accelerate and brake methods,
+        and with the getter and setter.
+      </li>
+    </ol>
+    <p>DATA CAR 1: 'Ford' going at 120 km/h</p>
+  </body>
+</html>
