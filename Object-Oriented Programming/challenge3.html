@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Challenge 3</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        line-height: 1.6;
+        background: black;
+        color: #ddd;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 5rem;
+        font-size: 2rem;
+        color: #ddd;
+      }
+
+      ol {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      ol li {
+        margin: 10px 0;
+        padding-left: 10px;
+      }
+
+      p {
+        max-width: 800px;
+        margin: 10px auto;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+    <script defer src="challenge3.js"></script>
+  </head>
+  <body>
+    <h1>Challenge 3</h1>
+    <ol>
+      <li>
+        Use a constructor function to implement an Electric Car (called EV) as a
+        CHILD "class" of Car. Besides a make and current speed, the EV also has
+        the current battery charge in % ('charge' property)
+      </li>
+      <li>
+        Implement a 'chargeBattery' method which takes an argument 'chargeTo'
+        and sets the battery charge to 'chargeTo'
+      </li>
+      <li>
+        Implement an 'accelerate' method that will increase the car's speed by
+        20, and decrease the charge by 1%. Then log a message like this: 'Tesla
+        going at 140 km/h, with a charge of 22%'
+      </li>
+      <li>
+        Create an electric car object and experiment with calling 'accelerate',
+        'brake' and 'chargeBattery' (charge to 90%). Notice what happens when
+        you 'accelerate'! HINT: Review the definiton of polymorphism
+      </li>
+    </ol>
+    <p>DATA CAR 1: 'Tesla' going at 135 km/h, with a charge of 89%</p>
+  </body>
+</html>
