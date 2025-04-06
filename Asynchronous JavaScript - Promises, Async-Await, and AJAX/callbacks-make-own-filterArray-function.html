@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Callbacks - make own filterArray function</title>
+    <link rel="stylesheet" href="callbacks-make-own-filterArray-function.css" />
+    <style></style>
+  </head>
+  <body>
+    <h1>Callbacks - make own filterArray function</h1>
+    <ol>
+      Write your own `filter` function! Don't worry about adding it to the
+      prototype of arrays or anything.
+      <br />
+      This function should take 2 parameters:
+      <li>The array you want to filter through</li>
+      <li>A callback function</li>
+    </ol>
+    <ol>
+      Steps for filterArray function logic:
+      <li>
+        Initialize a new, empty array which will be returned at the end of the
+        `filterArray`s operations
+      </li>
+      <li>Loop through the array passed as the 1st parameter</li>
+      <li>
+        Inside the loop, call the callback function, passing the individual item
+        you're currently looping over as the argument to your callback function
+      </li>
+      <li>
+        If the callback function returns `true`, push the current item you're
+        iterating on in the loop to the new array. If it returns `false`, don't
+        push it to the array.
+      </li>
+      <li>When the loop is over, return the new array</li>
+    </ol>
+    <button id="new-deck">New Deck, Please!</button>
+    <script defer src="callbacks-make-own-filterArray-function.js"></script>
+  </body>
+</html>
