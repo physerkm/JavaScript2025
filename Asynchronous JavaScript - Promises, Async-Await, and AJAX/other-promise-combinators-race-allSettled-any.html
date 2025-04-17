@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      defer
+      src="other-promise-combinators-race-allSettled-any.js"
+    ></script>
+    <title>Other Promise Combinators: race, allSettled, and any</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        line-height: 1.6;
+        background: black;
+        color: #ddd;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 5rem;
+        font-size: 2rem;
+        color: #ddd;
+      }
+
+      ul {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      ul li {
+        margin: 10px 0;
+        padding-left: 10px;
+      }
+
+      p {
+        max-width: 800px;
+        margin: 10px auto;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Other Promise Combinators: race, allSettled, and any</h1>
+    <ul>
+      <li>
+        Promise.race, just like all other combinators, receives an array of
+        Promises and it also returns a Promise. This Promise returned by
+        Promise.race is settled as soon as one of the input Promises settles.
+        Settled means that a value is available but it doesn't matter if the
+        Promise got rejected or fulfilled. In Promise.race, the first settled
+        Promise wins the race.
+      </li>
+      <li>
+        A Promise that gets rejected can also win the race. Promise.race short
+        circuits whenever one of the Promises gets settled. That means no matter
+        if fulfilled or rejected.
+      </li>
+      <li>
+        In the real world, Promise.race is very useful to prevent against never
+        ending Promises or also very long running Promises. For example, if your
+        user has a very bad internet connection, a fetch requests in your
+        application might take way too long to be useful so we can create a
+        special time out Promise, which automatically rejects after a certain
+        time has passed.
+      </li>
+      <li>
+        Promise.race and Promise.all are by far the most important Promise
+        combinators.
+      </li>
+      <li>
+        Promise.allSettled takes in an array of Promises again and it will
+        return an array of all the settled Promises. No matter if the Promises
+        got rejected or not. It is similar to Promise.all in regard that it also
+        returns an array of all the results but the difference is that
+        Promise.all will short circuit as soon as one Promise rejects but
+        Promise.allSettled never short circuits. It will return all the results
+        of all the Promises.
+      </li>
+      <li>
+        Promise.any is even more modern. It is ES2021. Promise.any takes in an
+        array of multiple Promises and this one will return the first fulfilled
+        Promise. It will ignore rejected Promises. Promise.any is very similar
+        to Promise.race with the difference that rejected Promises are ignored.
+        Therefore, the results of Promise.any is always going to be a fulfilled
+        Promise unless all of them reject.
+      </li>
+    </ul>
+  </body>
+</html>
